@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Clippy's Revenge</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+
+    <link rel="shortcut icon" href="assets/icons/computer-3.png" type="image/png">
+
+    <link rel="stylesheet" href="assets/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh">
+
+    <link rel="stylesheet" type="text/css" href="assets/win95.css">
+    <link rel="stylesheet" type="text/css" href="assets/clippy/clippy.css" media="all">
+    <style>
+        .crt::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+    </style>
+
+
+</head>
+
+<body class="windows-scrollbar crt">
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <marquee><h1 class="display-4">BSides PDX Free Flag Factory</h1></marquee>
+        <p class="lead">dade left this flag in the early oughts.</p>
+    </div>
+
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-6 text-center">
+                <div class="macbook">
+                    <img src="assets/macbook-mockup-pdx.png" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6 my-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Free Flags</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li oncopy="copyFlag()" onselect="copyFlag()">BSidesPDX{1s_1t_r34lly_th4t_34sy_t0_g3t_fl4gs}</li>
+                        </ul>
+                        <a href="#" onclick="copyFlag()" class="btn btn-lg btn-block"><img src="assets/icons/file_eye.png" class="icon-16"> Copy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Progress</h4>
+            </div>
+            <div class="card-body">
+                <div class="progress">
+                    <div id="progress" class="progress-bar progress-bar-blocks" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="taskbar">
+        <div class="row" style="margin-right: 0px;">
+            <div class="col-8">
+                <a href="https://github.com/AlexBSoft/win95.css" class="btn start-button"><img src="assets/icons/directory_folder_options-5.png" class="icon-16"> WIN95.CSS</a>
+                <a href="https://github.com/smore-inc/clippy.js" class="btn start-button"><img src="assets/icons/chm-2.png" class="icon-16"> Clippy</a>
+            </div>
+            <div class="col-4 time">Challenge by <a href="https://0xda.de">0xdade</a></div>
+        </div>
+
+    </footer>
+    <script src="assets/cursor-effects.js"></script>
+    <script src="assets/jquery-3.4.1.slim.min.js"></script>
+    <script src="assets/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"></script>
+    <script src="assets/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"></script>
+    <script>
+        function copyFlag() {
+            navigator.clipboard.writeText("BSidesPDX{1t_1snt_r34lly_th4t_34sy_s0rry}");
+        }
+    </script>
+    <!-- Clippy.js -->
+    <script src="assets/clippy/clippy.min.js"></script>
+    <!-- Init script -->
+    <script type="text/javascript">
+        new cursoreffects.ghostCursor();
+        (function () {
+        var blockContextMenu, myElement;
+
+        blockContextMenu = function (evt) {
+            evt.preventDefault();
+        };
+
+        window.addEventListener('contextmenu', blockContextMenu);
+        })();
+        var progress_bar_animation = function() {
+            var progress = Math.round(Math.random() * (5 - 3 + 1) + 1)
+            var sleep = Math.round(Math.random() * (20 - 5 + 1) + 1)
+            var current_progress = parseInt($("#progress").attr("aria-valuenow"))
+            var new_progress = parseInt(current_progress + Math.round(progress))
+            if (new_progress > 90) {
+                new_progress = 5
+            }
+            $("#progress").attr("aria-valuenow", new_progress)
+            $("#progress").attr("style", "width: " + new_progress + "%")
+            setTimeout(progress_bar_animation, sleep*1000)
+        }
+        progress_bar_animation()
+        const initial_message = "It looks like you're trying to get a free flag. I can help with that!"
+        const text_options = [
+            "What's a clipboard without Clippy?",
+            "Oh you think Bonzi Buddy could replace me?!",
+            "Hey Siri, bite me",
+            "Okay Google, play Never Gonna Give You Up by Rick Astley",
+            "This flag was basically free and you probably messed it up",
+            "This is so sad. Alexa, play Despacito",
+            "By Merlin's Beard!",
+            "If I were still around, I would defend your clipboard!",
+            "Having trouble? Try using Chrome!",
+            "I bet IE7 wouldn't have this problem...",
+            "I'm board..."
+        ]
+        clippy.load('Clippy', function(agent) {
+            // Do anything with the loaded agent
+            agent.show();
+            agent.speak(initial_message)
+            var animate = function() {
+                var rand = Math.round(Math.random() * (13 - 7 + 1) + 1)
+                if (rand % 2 === 0) {
+                    selected_text = text_options[Math.floor(Math.random()*text_options.length)]
+                    agent.stopCurrent()
+                    agent.speak(selected_text)
+                } else {
+                    agent.animate()
+                }
+                setTimeout(animate, rand*1000)
+            }
+            animate()
+        });
+        setTimeout(function(){clippy.load('Genie', function(agent) {
+            agent.show();
+            agent.speak(initial_message)
+            var animate = function() {
+                agent.animate()
+                var rand = Math.round(Math.random() * (3 - 1 + 1) + 1)
+                setTimeout(animate, rand*1000)
+            }
+            animate()
+        })}, 1000)
+        setTimeout(function(){clippy.load('Merlin', function(agent) {
+            agent.show();
+            agent.speak(initial_message)
+            var animate = function() {
+                agent.animate()
+                var rand = Math.round(Math.random() * (3 - 1 + 1) + 1)
+                setTimeout(animate, rand*1000)
+            }
+            animate()
+        })}, 3000)
+        setTimeout(function(){clippy.load('Bonzi', function(agent) {
+            agent.show();
+            agent.speak(initial_message)
+            var animate = function() {
+                agent.animate()
+                var rand = Math.round(Math.random() * (3 - 1 + 1) + 1)
+                setTimeout(animate, rand*1000)
+            }
+            animate()
+        })}, 4000)
+        setTimeout(function(){clippy.load('Genius', function(agent) {
+            agent.show();
+            agent.speak(initial_message)
+            var animate = function() {
+                agent.animate()
+                var rand = Math.round(Math.random() * (3 - 1 + 1) + 1)
+                setTimeout(animate, rand*1000)
+            }
+            animate()
+        })}, 10000)
+        setTimeout(function(){clippy.load('Links', function(agent) {
+            agent.show();
+            agent.speak(initial_message)
+            var animate = function() {
+                agent.animate()
+                var rand = Math.round(Math.random() * (3 - 1 + 1) + 1)
+                setTimeout(animate, rand*1000)
+            }
+            animate()
+        })}, 14000)
+        setTimeout(function(){clippy.load('Peedy', function(agent) {
+            agent.show();
+            agent.speak(initial_message)
+            var animate = function() {
+                agent.animate()
+                var rand = Math.round(Math.random() * (3 - 1 + 1) + 1)
+                setTimeout(animate, rand*1000)
+            }
+            animate()
+        })}, 19000)
+        setTimeout(function(){clippy.load('Rocky', function(agent) {
+            agent.show();
+            agent.speak(initial_message)
+            var animate = function() {
+                agent.animate()
+                var rand = Math.round(Math.random() * (3 - 1 + 1) + 1)
+                setTimeout(animate, rand*1000)
+            }
+            animate()
+        })}, 24000)
+        setTimeout(function(){clippy.load('Rover', function(agent) {
+            agent.show();
+            agent.speak(initial_message)
+            var animate = function() {
+                agent.animate()
+                var rand = Math.round(Math.random() * (3 - 1 + 1) + 1)
+                setTimeout(animate, rand*1000)
+            }
+            animate()
+        })}, 29000)
+        setTimeout(function(){clippy.load('F1', function(agent) {
+            agent.show();
+            agent.speak(initial_message)
+            var animate = function() {
+                agent.animate()
+                var rand = Math.round(Math.random() * (3 - 1 + 1) + 1)
+                setTimeout(animate, rand*1000)
+            }
+            animate()
+        })}, 35000)
+    </script>
+</body>
+
+</html>
