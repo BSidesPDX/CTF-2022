@@ -6,7 +6,13 @@ Blog post on how to use this framework is at [https://www.tophertimzen.com/blog/
 
 ## BSidesPDX
 
-How it was ran, when it was ran, kudos, etc
+Challenge authors:
+- [deanpierce](https://twitter.com/deanpierce)
+- [0xdade](https://twitter.com/0xdade)
+- [0x1nd0](https://twitter.com/0x1nd0)
+- [vpikhur](https://twitter.com/vpikhur)
+- [r00tkillah](https://twitter.com/r00tkillah)
+- [foo]()
 
 ## Challenges
 
