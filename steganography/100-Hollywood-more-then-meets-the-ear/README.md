@@ -11,7 +11,7 @@ Upload the song to the ScoreBoard and provided it to download.
 
 ## Challenge
 
-1nd0 has decided to try using something unconventional to hide his secret's can you figure out what he did to hid the flag?
+1nd0 has decided to try using something unconventional to hide his secret's. Can you figure out what he did to hide the flag?
 
 
 Author: [0x1nd0](https://twitter.com/0x1nd0)
