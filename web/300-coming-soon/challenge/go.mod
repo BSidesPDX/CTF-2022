@@ -1,4 +1,4 @@
-module github.com/r00tkillah/procrastination/challenge
+module github.com/BSidesPDX/CTF-2022/web/300-coming-soon/challenge
 
 go 1.18
 
