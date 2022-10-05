@@ -1,0 +1,9 @@
+services:
+  challenge:
+    build: .
+    ports:
+      - "80:1337"
+    environment:
+      - CHALLENGE_FLAG
+      - CHALLENGE_FLAGTIME
+    restart: always
