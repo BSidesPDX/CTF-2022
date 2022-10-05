@@ -12,7 +12,7 @@ Challenge authors:
 - [0x1nd0](https://twitter.com/0x1nd0)
 - [vpikhur](https://twitter.com/vpikhur)
 - [r00tkillah](https://twitter.com/r00tkillah)
-- [foo]()
+- [foo](https://github.com/blahblahbloopster)
 
 ## Challenges
 
