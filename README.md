@@ -27,7 +27,7 @@ How to deploy locally with compose, what packages are needed, etc
 
 How we deployed
 
-## Lock Picking Challanges Flags
+## Lock Picking Challenges Flags
 ```
 50: BSidesPDX{1_p1ck3d_th3_ez_1}
 100: BSidesPDX{th1s_0n3_w@s_h@rd3r}
