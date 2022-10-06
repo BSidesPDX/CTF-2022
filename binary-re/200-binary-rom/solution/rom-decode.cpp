@@ -1,10 +1,4 @@
-// rom-decode.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
-
-/* C:\Users\vold\Desktop\200-bsides-pdx-rom.bin (10/6/2022 12:29:25 PM)
-   StartOffset(h): 00000000, EndOffset(h): 000001FF, Length(h): 00000200 */
 
 unsigned char d[512] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x40, 0x00, 0xC1, 0x01, 0x00, 0x00,
