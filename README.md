@@ -34,3 +34,8 @@ How we deployed
 200: BSidesPDX{l00k_m0m_1_p1ck3d_1t}
 300: BSidesPDX{h@rd_p@d_l0ck}
 ```
+
+## Binary RE challange flag
+```
+BSidesPDX{DYB|O}
+```
