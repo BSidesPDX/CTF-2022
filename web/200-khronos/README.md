@@ -1,7 +1,7 @@
 # 200 - Khronos
 
 ## Description
-A simple timing attack challenge. The user submits a flag, and it is compared character-by-character to the real one, with an added 20ms delay to reduce the number of samples needed for a good result.  The solution is in src/test/kotlin/com/github/blahblahbloopster/ApplicationTest.kt
+A simple timing attack challenge. The user submits a flag, and it is compared character-by-character to the real one, with an added 20ms delay to reduce the number of samples needed for a good result.  The solution is in src/test/kotlin/com/github/blahblahbloopster/ApplicationTest.kt.  Current flag: `BSidesPDX{N0m9gG485z0=}`
 
 ## Deploy
 ```
