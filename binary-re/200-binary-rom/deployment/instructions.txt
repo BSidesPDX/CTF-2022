@@ -1,1 +1,1 @@
-you hey you. we dumped this ROM from a car ECU that runs 32bit processor help us decoding it
+you hey you. we dumped this ROM from a dual bank EEPROM inside a car ECU that runs 32bit processor help us decoding it
