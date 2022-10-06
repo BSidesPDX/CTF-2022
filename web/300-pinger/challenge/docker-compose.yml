@@ -1,0 +1,52 @@
+version: "3.0"
+services:  
+  front:
+    container_name: frontend
+    hostname: pingutil
+    read_only: true
+    build: .
+    networks: 
+      - frontend
+      - backend
+    ports:
+      - 8080:8080
+
+  middle:
+    image: lscr.io/linuxserver/openssh-server:latest
+    container_name: middle
+    hostname: jumphost
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - PUBLIC_KEY_FILE=/config/id_rsa.pub
+      - SUDO_ACCESS=false #optional
+      - PASSWORD_ACCESS=false #optional
+      - USER_PASSWORD=password #optional
+      - USER_NAME=sysop #optional
+      - HISTFILE=/dev/null
+    volumes:
+      - "./middle/config:/config"
+    restart: unless-stopped
+    networks:
+      - middle
+      - backend
+
+  back:
+    container_name: backend
+    hostname: fileserver
+    read_only: true
+    image: projectdiscovery/simplehttpserver
+    entrypoint: simplehttpserver -listen 0.0.0.0:80
+    networks:
+      - backend
+    volumes:
+      - "./back/files:/files"
+
+networks:
+  frontend:
+    driver: bridge
+  middle:
+    driver: bridge
+  backend:
+    driver: bridge
