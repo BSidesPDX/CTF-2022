@@ -1,0 +1,8 @@
+ROM organization:
+
+2 banks odd/even
+256 bits per row in a bank
+32bit per word 
+8 bit columns
+
+
