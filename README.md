@@ -37,5 +37,6 @@ How we deployed
 
 ## Binary RE challange flag
 ```
-BSidesPDX{DYB|O}
+100: BSidesPDX{DYB|O}
+200: BSidesPDX{wou1d_u_100k_at_dat_fl4G_oh!!_Gee}
 ```
