@@ -13,6 +13,7 @@ Challenge authors:
 - [vpikhur](https://twitter.com/vpikhur)
 - [r00tkillah](https://twitter.com/r00tkillah)
 - [foo](https://github.com/blahblahbloopster)
+- [kegwin](https://twitter.com/_kegwin)
 
 ## Challenges
 
@@ -25,3 +26,11 @@ How to deploy locally with compose, what packages are needed, etc
 ## Cloud Deployment
 
 How we deployed
+
+## Lock Picking Challanges Flags
+```
+50: BSidesPDX{1_p1ck3d_th3_ez_1}
+100: BSidesPDX{th1s_0n3_w@s_h@rd3r}
+200: BSidesPDX{l00k_m0m_1_p1ck3d_1t}
+300: BSidesPDX{h@rd_p@d_l0ck}
+```
