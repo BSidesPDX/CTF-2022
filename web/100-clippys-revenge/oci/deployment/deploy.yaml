@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clippy100
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clippy100
+  template:
+    metadata:
+      name: clippy100
+      labels:
+        app: clippy100
+    spec:
+      containers:
+        - name: clippy100
+          image: us-phoenix-1.ocir.io/ax0uvqijwxae/bsidespdx2022/100-clippy:latest
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+          ports:
+            - containerPort: 8000
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: ocirsecret

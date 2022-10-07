@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pwn50
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pwn50
+  template:
+    metadata:
+      name: pwn50
+      labels:
+        app: pwn50
+    spec:
+      containers:
+        - name: pwn50
+          image: us-phoenix-1.ocir.io/ax0uvqijwxae/bsidespdx2022/50-bof:latest
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+          ports:
+            - containerPort: 9999
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: ocirsecret

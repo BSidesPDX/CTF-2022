@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: comingsoon300
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: comingsoon300
+  template:
+    metadata:
+      name: comingsoon300
+      labels:
+        app: comingsoon300
+    spec:
+      containers:
+        - name: comingsoon300
+          image: us-phoenix-1.ocir.io/ax0uvqijwxae/bsidespdx2022/300-coming-soon:latest
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+          ports:
+            - containerPort: 1337
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: ocirsecret

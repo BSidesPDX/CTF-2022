@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: khronos200
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: khronos200
+  template:
+    metadata:
+      name: khronos200
+      labels:
+        app: khronos200
+    spec:
+      containers:
+        - name: khronos200
+          image: us-phoenix-1.ocir.io/ax0uvqijwxae/bsidespdx2022/200-khronos:latest
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+          ports:
+            - containerPort: 80
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: ocirsecret

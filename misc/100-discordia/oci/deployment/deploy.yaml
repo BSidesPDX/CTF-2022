@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: misc100
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: misc100
+  template:
+    metadata:
+      name: misc100
+      labels:
+        app: misc100
+    spec:
+      containers:
+        - name: misc100
+          image: us-phoenix-1.ocir.io/ax0uvqijwxae/bsidespdx2022/100-discorda:latest
+          env:
+          - name: DISCORD_TOKEN
+            value: "{uploaddiscordtokenhere}"
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+          ports:
+            - containerPort: 8081
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: ocirsecret
