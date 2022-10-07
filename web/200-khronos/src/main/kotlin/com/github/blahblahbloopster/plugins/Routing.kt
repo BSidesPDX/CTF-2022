@@ -37,7 +37,7 @@ fun Application.configureRouting() {
 fun insecureStringComp(a: String, b: String): Boolean {
     if (a.length != b.length) return false
     for ((c, d) in a.zip(b)) {
-        Thread.sleep(20L)
+        Thread.sleep(100L)
         if (c != d) return false
     }
     return true
