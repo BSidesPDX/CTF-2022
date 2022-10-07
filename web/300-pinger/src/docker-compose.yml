@@ -7,7 +7,7 @@ services:
     build: .
     networks: 
       - frontend
-      - backend
+      - middle
     ports:
       - 8080:8080
 
