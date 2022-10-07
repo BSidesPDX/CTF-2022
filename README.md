@@ -40,3 +40,11 @@ How we deployed
 100: BSidesPDX{DYB|O}
 200: BSidesPDX{wou1d_u_100k_at_dat_fl4G_oh!!_Gee}
 ```
+## Cryptocoin flags
+```
+100 BSidesPDX{I_CAN_DO_WHAT_I_WANT}
+200 BSidesPDX{S4V3_DA_SQu4TCHz}
+300 BSidesPDX{W3_n33d_2_go_D33P3R}
+400 BSidesPDX{C0D3_Iz_L4W}
+500 BSidesPDX{4LL_my_Squatch_R_GONE}
+```

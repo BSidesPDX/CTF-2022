@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pinger300front
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pinger300front
+  template:
+    metadata:
+      name: pinger300front
+      labels:
+        app: pinger300front
+    spec:
+      containers:
+        - name: pinger300front
+          image: phx.ocir.io/oke/bsidespdx2019/web100_backend:latest
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+          ports:
+          - containerPort: 8080
+          env:
+          - name: LOG_JSON
+            value: "true"
+          - name: LOG_LEVEL
+            value: "trace"
+          - name: DB_PATH
+            value: "signedsealed.db"
+          - name: FLAG
+            value: "BSidesPDX{5f0505ea-72d1-40c4-8451-d4a3e19e7491}"
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: ocirsecret
